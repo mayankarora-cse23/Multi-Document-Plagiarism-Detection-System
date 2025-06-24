@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plagiarism Checker</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+  </head>
+  
+<body>
+  <div class="header">
+    <h1>📄 Plagiarism Checker</h1>
+    <p class="subtitle">Check your document against a folder of files with multiple similarity metrics</p>
+  </div>
+
+  <div class="container">
+    <form id="uploadForm" class="input-section">
+      <div class="input-group">
+        <label for="fileInput">Upload Document to Check</label>
+        <input type="file" id="fileInput" accept=".txt,.pdf,.docx" />
+      </div>
+      <div class="input-group">
+        <label for="folderInput">Upload Folder of Documents</label>
+        <input type="file" id="folderInput" accept=".txt,.pdf,.docx" webkitdirectory directory multiple />
+      </div>
+      <button type="submit">🚀 Compare Now</button>
+    </form>
+
+    <div id="progressContainer" class="progress-container hidden">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <div id="spinner" class="spinner hidden"></div>
+
+    <div id="summary" class="summary hidden"></div>
+
+    <div class="results-container" id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
